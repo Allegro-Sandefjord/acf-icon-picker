@@ -1,210 +1,114 @@
-.icon-picker {
-    position: absolute;
-    display: none;
-    z-index: 999
+.algolia-outer.acf-input-wrap {
+    overflow: visible
+}
+.algolia-autocomplete {
+    width: 100%;
+}
+.algolia-autocomplete .material-icons,
+.algolia-autocomplete .fa {
+    font-size: 14px;
+    text-indent: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
 }
 
-.icon-picker * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    text-decoration: none;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box
+.algolia-autocomplete .provider-outer .material-icons.provider,
+.algolia-autocomplete .provider-outer .fa.provider {
+    padding-right: 7px;
+    padding-top: 2px;
+    color: #8f8f8f;
 }
 
-.icon-picker .icon-picker-description,
-.icon-picker .icon-picker-title {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    border-bottom: 1px solid #CCC;
-    padding-bottom: 5px;
-    margin-bottom: 5px
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+    width: 100%;
+}
+.algolia-autocomplete .aa-hint {
+    color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-top: none;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+    clear:both;
+    cursor: pointer;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion-inner {
+    padding: 5px 4px;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+    background-color: #B2D7FF;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+    font-weight: bold;
+    font-style: normal;
 }
 
-.icon-picker .icon-picker-description {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0
-}
-
-.icon-picker .icon-picker-wrap {
+.algolia-outer .icon-container {
     position: relative;
-    border: 1px solid #CCC;
-    width: 400px
-}
-
-.icon-picker .icon-picker-results {
-    height: 245px;
-    background: #FFF
-}
-
-.icon-picker .icon-picker-item {
-    padding: 5px;
-    border-bottom: 1px solid #F1F1F1;
-    background: #FFF
-}
-
-.icon-picker .icon-picker-item:hover {
-    background: #fafafa
-}
-
-.icon-picker .icon-picker-actions:after,
-.icon-picker .icon-picker-item:after {
-    content: "";
-    display: table;
-    clear: both
-}
-
-.icon-picker .icon-picker-item .icon-picker-thumbnail {
-    position: relative;
-    float: left;
-    width: 65px;
-    height: 49px;
-    border: 1px solid #CCC;
-    margin-right: 5px;
-    overflow: hidden
-}
-
-.icon-picker .icon-picker-thumbnail img {
-    width: 100%
-}
-
-.icon-picker .icon-picker-duration {
-    background-color: rgba(0, 0, 0, .6);
-    padding: 2px;
-    font-size: 11px;
-    color: #FFF;
+    width: 130px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
     text-align: center;
+    margin-bottom: 15px;
+}
+
+.algolia-outer .icon-container .clear-icon.dashicons, 
+.algolia-outer .icon-container .clear-icon.dashicons-before::before {
+    font-size: 26px;
+}
+
+.algolia-outer .icon-container .icon-container-inner {
+    margin-top: 22px;
+    width: 100%;
+    padding-right: 10px;
+}
+
+.algolia-outer .icon-container .icon-container-inner .material-icons,
+.algolia-outer .icon-container .icon-container-inner .fa {
+    font-size: 42px;
+}
+
+.algolia-outer .icon-container .icon-container-inner .material-icons.empty-icon,
+.algolia-outer .icon-container .icon-container-inner .fa.empty-icon {
+    color: #dcdcdc;
+}
+
+.algolia-outer .icon-container .clear-icon {   
     position: absolute;
-    bottom: 2px;
-    right: 2px
+    top: 1px;
+    right: 6px;
 }
 
-.icon-picker .icon-picker-info {
-    display: inline;
-    float: left;
-    color: #666;
-    width: 81%
+.algolia-autocomplete .provider-outer {
+    float:left;
+    background: #f7f7f7;
+    line-height:31px;
+    height:31px;
+    width:30px;
+    text-align:center;
+    text-indent:2px;
 }
 
-.icon-picker .icon-picker-info * {
-    font-size: 10px;
-    text-transform: uppercase
-}
-
-.icon-picker .icon-picker-rating {
-    display: block;
-    height: 1px;
-    background: red;
-    margin: 4px 0
-}
-
-.icon-picker .icon-picker-rating .icon-picker-likes {
-    height: 1px;
-    background: #338A2E
-}
-
-.icon-picker .icon-picker-info .icon-picker-view-count {
-    display: inline;
-    float: left
-}
-
-.icon-picker .icon-picker-no-records {
-    display: none;
-    padding: 5px;
-    text-align: center;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #666
-}
-
-.icon-picker .icon-picker-view-count span {
-    text-transform: uppercase
-}
-
-.icon-picker .icon-picker-actions {
-    display: inline;
-    float: left;
-    margin-top: 2px
-}
-
-.icon-picker .icon-picker-actions a {
-    text-transform: uppercase;
-    font-size: 10px;
-    background: #CCC;
-    color: #666;
-    padding: 3px 10px;
-    display: inline-block;
-    margin-right: 5px
-}
-
-.icon-picker .icon-picker-actions a:hover {
-    color: #F1F1F1;
-    background-color: #CC181E
-}
-
-.icon-picker .nano>.nano-pane {
-    width: 8px
-}
-
-.icon-picker.loading .icon-picker-loader {
-    display: block;
+.algolia-outer .icon-container .provider {
+    width: 100%;
     position: absolute;
+    min-height: 14px;
     bottom: 0;
-    background: rgba(204, 204, 204, .6);
-    color: #666;
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #CCC;
-    font-size: 11px;
-    padding: 2px 0;
-    text-transform: uppercase
-}
-
-.icon-picker.loading .icon-picker-content {
-    margin-bottom: 20px
-}
-
-.icon-picker-loader,
-.icon-picker-preview {
-    display: none
-}
-
-.icon-picker-preview.show {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 247px;
-    top: 0;
-    left: 0;
-    background: #000
-}
-
-.icon-picker-preview .icon-picker-actions {
-    position: absolute;
-    float: none;
-    z-index: 99;
-    padding: 0;
+    left: 0;                
     right: 0;
-    bottom: -20px;
-    margin: 0;
-    cursor: pointer
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 10px;
+    padding: 5px 0;
+    display: block;
+    background: #f7f7f7;
+    border-top: solid 1px #eee; 
 }
 
-.icon-picker-preview .icon-picker-actions a {
-    padding: 5px 10px;
-    margin: 0 0 0 1px
-}
-
-.icon-picker-player {
-    position: relative;
-    height: 100%
+.algolia-outer .icon-container .provider a {
+    color: #333;
 }

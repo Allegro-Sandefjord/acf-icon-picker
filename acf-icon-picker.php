@@ -13,20 +13,29 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 if( ! defined( 'ABSPATH' ) ) exit;
 
-if( ! class_exists( 'icon_picker' ) ) {
-	require_once plugin_dir_path( __FILE__ ) . 'inc/icon-picker.php';
+$acf_ip_includes = array(
+    'config.php',                               // Initial config
+    'lib/acf-icon-picker-helper.php',           // Helpers
+    'lib/acf-icon-picker-frontend.php',         // Front-end dependencies include
+    'lib/acf-icon-picker-options.php',          // Optionspage
+);
+
+foreach ($acf_ip_includes as $include_file) {
+    if (!file_exists(__DIR__ . '/' . $include_file)) {
+        trigger_error(sprintf(__('Error locating %s for inclusion', 'acf-icon-picker'), $include_file), E_USER_ERROR);
+    }
+    else
+    {
+        require_once __DIR__ . '/' . $include_file;
+    }
 }
 
-load_plugin_textdomain( 'acf-icon-picker', false, dirname( plugin_basename(__FILE__) ) . '/lang/' ); 
+// Advanced Custom Field 5 >
+add_action('acf/include_field_types', function ( $version ) {	
+	include_once('lib/acf-icon-picker-v5.php');	
+});	
 
-function include_field_types_icon_picker( $version ) {	
-	include_once('acf-icon-picker-v5.php');	
-}
-
-add_action('acf/include_field_types', 'include_field_types_icon_picker');	
-
-function register_fields_icon_picker() {
-	include_once('acf-icon-picker-v4.php');
-}
-
-add_action('acf/register_fields', 'register_fields_icon_picker');
+// Advanced Custom Field 4
+add_action('acf/register_fields', function() {
+	include_once('lib/acf-icon-picker-v4.php');
+});
