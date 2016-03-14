@@ -113,8 +113,8 @@ class acf_field_icon_picker extends acf_field {
 
 <tr class="field_option field_option_<?php echo $this->name; ?>">
 	<td class="label">
-		<label><?php _e('Choose icon-provider','acf-icon-picker'); ?></label>
-        <?php printf( __('Are you missing a provider? Make a <a href="mailto:%s">request</a> and maybe we can do something about it!','acf-icon-picker'), 'robert.sather@outlook.com'); ?>
+		<label><?php _e( 'Choose icon-provider','acf-icon-picker' ); ?></label>
+        <?php printf( __( 'Are you missing a provider? Make a <a href="mailto:%s">request</a> and maybe we can do something about it!','acf-icon-picker'), $GLOBALS['acf_ic_contact_email'] ); ?>
 	</td>
 	<td>
 		<?php
@@ -278,7 +278,7 @@ class acf_field_icon_picker extends acf_field {
 
 	function input_admin_enqueue_scripts() {
         
-        $dir = plugin_dir_url( __FILE__ ) . '../';
+        $dir = plugin_dir_url( dirname(__DIR__) . '/acf-icon-picker.php' );
         
         // Register JS
         wp_register_script( 'algolia-autocomplete-jquery', "//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js" );

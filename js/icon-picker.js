@@ -1,15 +1,35 @@
 (function ($){
 
-$(document).ready(function(){
-   
-    var client = algoliasearch('KYYL714XXY', '7a86a04547fb3653f7ca1ae779f4f6e7');
-    var index = client.initIndex('icons');
+// Define global vars
+var client, index;
 
+// Support for ACF Widgets
+$(document).on('widget-updated', function(e, widget){
+    
+    // Reinit Algolia-fields inside saved widget
+    $(widget).find('.algolia-outer').initACFIconPicker();
+});
+
+$(document).ready(function(){
+    
+    // Init Algolia
+    client = algoliasearch('KYYL714XXY', '7a86a04547fb3653f7ca1ae779f4f6e7');
+    index = client.initIndex('icons'); 
+    
+    // Init all searchfields
+    $('.algolia-outer').initACFIconPicker();
+    
+});
+
+// Init
+$.fn.initACFIconPicker = function()
+{
+    
     // Loop through all algolia fields
-    $('.algolia-outer').each(function(){
+    $(this).each(function(i, el){
         
         // Get object
-        var obj = $(this);
+        var obj = $(el);
         
         // Get hits per oage
         var per_page = obj.data('hits-per-page');
@@ -166,8 +186,7 @@ $(document).ready(function(){
         parent_el.find('.icon-container-inner').html(icon_markup);
 
     });
-    
-});
+};
 
 // Generate markup for icon
 $.fn.generateIcon = function(code, type, class_name, title)

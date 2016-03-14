@@ -3,7 +3,7 @@
 /*
 Plugin Name: ACF Icon Picker
 Plugin URI: 
-Description: Search and select icons on from Google Material Icosn or Font Awesome without leaving the page.
+Description: Search and select icons on from Google Material Icons or Font Awesome without leaving the page.
 Version: 1.0
 Author: Robert Sather
 Author URI: https://github.com/roberts91

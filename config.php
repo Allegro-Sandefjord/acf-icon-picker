@@ -13,3 +13,6 @@ $GLOBALS['acf_ic_providers'] = array(
         'icon'  => 'flag',
     ),
 );
+
+
+$GLOBALS['acf_ic_contact_email'] = 'robert.sather@outlook.com';

@@ -6,10 +6,10 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Search and select icons on from Google Material Icosn or Font Awesome without leaving the page.
+Search and select icons on from Google Material icons or Font Awesome without leaving the page.
 
 == Description ==
-Search and select icons on from Google Material Icosn or Font Awesome without leaving the page.
+Search and select icons on from Google Material icons or Font Awesome without leaving the page.
 
 = Field Types =
 This ACF field type is compatible with:
