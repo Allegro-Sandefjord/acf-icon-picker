@@ -1,51 +1,9 @@
+/* ACF fix for displaying autocompletion */
 .algolia-outer.acf-input-wrap {
     overflow: visible
 }
-.algolia-autocomplete {
-    width: 100%;
-}
-.algolia-autocomplete .material-icons,
-.algolia-autocomplete .fa {
-    font-size: 14px;
-    text-indent: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-}
 
-.algolia-autocomplete .provider-outer .material-icons.provider,
-.algolia-autocomplete .provider-outer .fa.provider {
-    padding-right: 7px;
-    padding-top: 2px;
-    color: #8f8f8f;
-}
-
-.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 100%;
-}
-.algolia-autocomplete .aa-hint {
-    color: #999;
-}
-.algolia-autocomplete .aa-dropdown-menu {
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid #999;
-    border-top: none;
-}
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    clear:both;
-    cursor: pointer;
-}
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion-inner {
-    padding: 5px 4px;
-}
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #B2D7FF;
-}
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-}
-
+/* Icon display container */
 .algolia-outer .icon-container {
     position: relative;
     width: 130px;
@@ -56,19 +14,29 @@
     margin-bottom: 15px;
 }
 
+.algolia-outer .provider-image {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+}
+
 .algolia-outer .icon-container .clear-icon.dashicons, 
 .algolia-outer .icon-container .clear-icon.dashicons-before::before {
     font-size: 26px;
 }
 
 .algolia-outer .icon-container .icon-container-inner {
-    margin-top: 22px;
+    padding-top: 20px;
     width: 100%;
     padding-right: 10px;
+    word-break: break-all;
 }
 
 .algolia-outer .icon-container .icon-container-inner .material-icons,
-.algolia-outer .icon-container .icon-container-inner .fa {
+.algolia-outer .icon-container .icon-container-inner .fa,
+.algolia-outer .icon-container .icon-container-inner .dashicons,
+.algolia-outer .icon-container .icon-container-inner .stroke-icon {
     font-size: 42px;
 }
 
@@ -81,16 +49,6 @@
     position: absolute;
     top: 1px;
     right: 6px;
-}
-
-.algolia-autocomplete .provider-outer {
-    float:left;
-    background: #f7f7f7;
-    line-height:31px;
-    height:31px;
-    width:30px;
-    text-align:center;
-    text-indent:2px;
 }
 
 .algolia-outer .icon-container .provider {
@@ -109,6 +67,108 @@
     border-top: solid 1px #eee; 
 }
 
-.algolia-outer .icon-container .provider a {
+.algolia-outer .icon-container .provider a,
+.algolia-outer .icon-container .provider a:hover span.inner {
     color: #333;
+    text-decoration: none;
+}
+
+.algolia-outer .icon-container .provider a span.inner {
+    text-decoration: underline;
+}
+
+/* Autocomplete hacks */
+
+.algolia-autocomplete {
+    width: 100%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu {
+    border: none !important;
+    padding-bottom: 15px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu > * {
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+    width: 100%;
+}
+.algolia-autocomplete .aa-hint {
+    color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+    width: 100%;
+    background-color: none;
+    border: 1px solid #999;
+    border-top: none;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+    clear: both;
+    position: relative;
+    cursor: pointer;
+    background: #fff;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion:nth-child(even) {
+    background: #fcfcfc;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+    background-color: #B2D7FF;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Custom algolia result container */
+
+.algolia-outer .suggestion-outer {
+    display: table;
+    position: relative;
+}
+
+.algolia-outer .suggestion-outer .provider-outer {
+    display: table-cell;
+    vertical-align: middle;
+    background: #f7f7f7;
+    width: 30px;
+    text-align: center;
+}
+
+.algolia-outer .suggestion-outer .provider-outer .provider {
+    font-size: 12px;
+    color: #8f8f8f;
+}
+
+.algolia-outer .suggestion-outer .suggest-icon-outer {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+    text-align: center;
+    padding: 5px 5px 5px 3px;
+}
+
+.algolia-outer .suggestion-outer .suggestion-inner {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px 5px 5px 0;
+}
+
+.algolia-outer .suggestion-outer .suggest-icon-outer .material-icons,
+.algolia-outer .suggestion-outer .suggest-icon-outer .fa,
+.algolia-outer .suggestion-outer .suggest-icon-outer .dashicons,
+.algolia-outer .suggestion-outer .suggest-icon-outer .stroke-icon {
+    font-size: 24px !important;
+}
+
+/* Dashicons fix */
+.algolia-outer .suggestion-outer .suggest-icon-outer .dashicons,
+.algolia-outer .suggestion-outer .suggest-icon-outer .dashicons-before::before,
+.algolia-outer .icon-container .icon-container-inner .dashicons {
+    width: auto !important;
+    height: auto !important;
 }

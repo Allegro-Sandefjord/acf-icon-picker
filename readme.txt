@@ -2,14 +2,14 @@
 Tags: acf, icon, icons, google, google material design, google material icons, font awesome, picker, custom field, search, simple, field, custom
 Requires at least: 3.5.0
 Tested up to: 4.4
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Search and select icons on from Google Material icons or Font Awesome without leaving the page.
+Search and select icons from Font Awesome, Dashicons and more without leaving WP-admin.
 
 == Description ==
-Search and select icons on from Google Material icons or Font Awesome without leaving the page.
+Search and select icons from Font Awesome, Dashicons and more without leaving WP-admin.
 
 = Field Types =
 This ACF field type is compatible with:
