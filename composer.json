@@ -1,0 +1,11 @@
+{
+    "name": "robsat91/acf-icon-picker",
+    "type": "wordpress-plugin",
+    "description": "Icon picker-plugin for ACF.",
+    "authors": [
+        {
+            "name": "Robert Sæther",
+            "email": "robert.sather@outlook.com"
+        }
+    ]
+}
