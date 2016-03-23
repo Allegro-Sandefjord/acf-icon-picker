@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ACF Icon Picker\n"
+"POT-Creation-Date: 2016-03-20 14:20+0100\n"
+"PO-Revision-Date: 2016-03-20 14:20+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: acf-icon-picker.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: acf-icon-picker.php:54
+msgid "No icon selected"
+msgstr "Ingen ikon valgt"
+
+#: acf-icon-picker.php:55
+msgid "Unknown provider"
+msgstr "Ukjent tilbyder"
+
+#: lib/acf-v4-init.php:40 lib/acf-v5-init.php:40
+msgid "Icon picker"
+msgstr "Ikonvelger"
+
+#: lib/acf-v4-init.php:114 lib/acf-v5-init.php:122
+msgid "Choose icon-provider"
+msgstr "Velg ikontilbyder"
+
+#: lib/acf-v4-init.php:115 lib/acf-v5-init.php:123
+#, php-format
+msgid ""
+"Are you missing a provider? Make a <a href=\"mailto:%s\">request</a> and "
+"maybe we can do something about it!"
+msgstr ""
+"Savner du noen her? Send oss en <a href=\"mailto:%s\">melding</a> så kanskje "
+"vi kan gjøre noe med det!"
+
+#: lib/acf-v4-init.php:135 lib/acf-v5-init.php:132
+msgid "Placeholder text"
+msgstr "Plassholdertekst"
+
+#: lib/acf-v4-init.php:136 lib/acf-v4-init.php:156 lib/acf-v5-init.php:134
+#: lib/acf-v5-init.php:143
+#, php-format
+msgid "Default: %s"
+msgstr "Standardverdi: %s"
+
+#: lib/acf-v4-init.php:136 lib/acf-v4-init.php:146 lib/acf-v5-init.php:134
+#: lib/acf-v5-init.php:135 lib/common.php:11 lib/helpers.php:83
+msgid "Start to type..."
+msgstr "Begynn å skrive..."
+
+#: lib/acf-v4-init.php:155 lib/acf-v5-init.php:141
+msgid "Number of hits"
+msgstr "Antall treff"
+
+#. Plugin Name of the plugin/theme
+#: lib/options.php:14 lib/options.php:15 lib/options.php:28 lib/options.php:83
+#: lib/options.php:84
+msgid "ACF Icon Picker"
+msgstr "ACF Ikonvelger"
+
+#: lib/options.php:34 lib/options.php:103
+msgid "Custom inclusion of CSS front-end dependencies?"
+msgstr "Tilpasset inkludering av frontend CSS-filer?"
+
+#: lib/options.php:35 lib/options.php:106
+msgid "(If this is not checked then all dependencies will be loaded.)"
+msgstr "(Dersom denne ikke er huket av vil alle CSS-filer bli lastet inn.)"
+
+#: lib/options.php:41 lib/options.php:119
+msgid "Custom inclusion"
+msgstr "Tilpasset inkludering"
+
+#: lib/options.php:42 lib/options.php:122
+msgid ""
+"(Choose the dependencies that should be loaded during a front-end pageload.)"
+msgstr "(Velg hvilke som bør inkluderes under et frontend sidelast.)"
+
+#: lib/options.php:57 lib/options.php:156
+msgid ""
+"Note that inclusion of many files may increase the loading time of your page."
+"<br>The custom inclusion setting can be handy if you want to control the "
+"front-end dependencies yourself."
+msgstr ""
+"Merk at inkludering av mange filer kan øke lastetiden på siden.<br>Tilpasset "
+"inkludering kan være kjekt dersom du ønsker å kontrollere inkluderingen av "
+"filer selv."
+
+#: lib/options.php:99
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: lib/options.php:145
+msgid "Note:"
+msgstr "Merk:"
+
+#. Description of the plugin/theme
+msgid ""
+"Search and select icons from Font Awesome, Dashicons and more without "
+"leaving WP-admin."
+msgstr ""
+"Søk og velg ikoner fra Font Awesome, Dashicons og flere uten å forlate WP-"
+"admin."
+
+#. Author of the plugin/theme
+msgid "Robert Sæther"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/roberts91"
+msgstr ""
+
+#~ msgid ""
+#~ "Note that inclusion of many files may increase the loading time of your "
+#~ "page.<br>The custom inclusion setting can be handy if you want to control "
+#~ "the front-end dependencies yourself in your theme etc."
+#~ msgstr ""
+#~ "Merk at inkludering av mange filer kan øke lastetiden på siden."
+#~ "<br>Tilpasset inkludering kan være kjekt dersom du ønsker å selv "
+#~ "kontrollere inkluderingen av filer."
+
+#~ msgid "(Google Material icons, Font Awesome etc.)"
+#~ msgstr "(Google Material icons, Font Awesome etc.)"
+
+#~ msgid ""
+#~ "Search and select icons on from Google Material Icons or Font Awesome "
+#~ "without leaving the page."
+#~ msgstr ""
+#~ "Søk og velg ikoner fra Google Material Icons eller Font Awesome uten å "
+#~ "forlate skjemaet."
