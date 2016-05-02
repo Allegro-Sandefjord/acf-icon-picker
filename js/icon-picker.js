@@ -1,3 +1,6 @@
+// Get our version on autocomplete and put it in another object key
+jQuery.fn.algolia_autocomplete = jQuery.fn.autocomplete;
+
 (function ($){
 
 // Define global vars
@@ -136,7 +139,7 @@ $.fn.initACFIconPicker = function()
         }
         
         // Find search-input
-        obj.find('.acf-icon-autocomplete-me').autocomplete({ hint: false }, [{
+        obj.find('.acf-icon-autocomplete-me').algolia_autocomplete({ hint: false }, [{
             source: function(q, cb) {
                 index.search(q, algolia_config,
                 function(error, content) {
