@@ -4,7 +4,7 @@
 Plugin Name: ACF Icon Picker
 Plugin URI: 
 Description: Search and select icons from Font Awesome, Dashicons and more without leaving WP-admin.
-Version: 1.3
+Version: 1.4
 Text Domain: acf-icon-picker
 Domain Path: /languages
 Author: Robert Sæther

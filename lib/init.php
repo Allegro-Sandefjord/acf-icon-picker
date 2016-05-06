@@ -46,7 +46,7 @@ add_action('admin_enqueue_scripts', function(){
     $minified = (\ACF_IP_helpers\get_plugin_environment() == 'production');
     
     // Add JS
-    wp_register_script( 'acf-icon-picker', "{$dir}js/icon-picker" . ($minified ? '.min' : '') . ".js", array(), $plugin_version, true );
+    wp_register_script( 'acf-icon-picker', "{$dir}js/icon-picker" . ($minified ? '.min' : '') . ".js", array('jquery', 'algolia-autocomplete-jquery', 'algolia-search'), $plugin_version, true );
     
     // Get all providers
     $providers = ACF_IP_helpers\get_providers(true);

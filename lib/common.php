@@ -100,15 +100,9 @@ function admin_enqueue_scripts()
     // Get plugin version
     $plugin_version = \ACF_IP_helpers\get_plugin_version();
     
-    // Register Aloglia JS
-    wp_register_script( 'algolia-autocomplete-jquery', "//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js" );
-    wp_register_script( 'algolia-search', "//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js" );
-		
-	// Enqueue Aloglia JS
-	wp_enqueue_script(array(
-        'algolia-autocomplete-jquery',
-        'algolia-search',
-	));
+    // Enqueue Aloglia JS
+    wp_enqueue_script( 'algolia-autocomplete-jquery', "//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js", array('jquery'), '0.19.1', true );
+    wp_enqueue_script( 'algolia-search', "//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js", array('jquery', 'algolia-autocomplete-jquery'), '3.14.0', true );
     
     // Get all providers    
     $providers = \ACF_IP_helpers\get_providers(true);

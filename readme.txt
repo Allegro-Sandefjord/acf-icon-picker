@@ -2,7 +2,7 @@
 Tags: acf, icon, icons, google, google material design, google material icons, font awesome, picker, custom field, search, simple, field, custom
 Requires at least: 3.5.0
 Tested up to: 4.5.1
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

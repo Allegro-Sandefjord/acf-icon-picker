@@ -1,4 +1,4 @@
-// Get our version on autocomplete and put it in another object key
+// Get our version of autocomplete and put it in another object key
 jQuery.fn.algolia_autocomplete = jQuery.fn.autocomplete;
 
 (function ($){

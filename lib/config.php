@@ -16,7 +16,7 @@ $GLOBALS['acf_ip']['environment'] = ( defined( 'ACF_IP_ENVIRONMENT' ) ? ACF_IP_E
 $GLOBALS['acf_ip']['plugin_url'] = plugin_dir_url( dirname(__DIR__) . '/acf-icon-picker.php' );
 
 // Set plugin version
-$GLOBALS['acf_ip']['version'] = '1.3';
+$GLOBALS['acf_ip']['version'] = '1.4';
 
 // Define icon-providers
 $GLOBALS['acf_ip']['providers'] = array(
